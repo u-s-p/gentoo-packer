@@ -35,9 +35,9 @@
       "guest_additions_mode": "disable",
       "guest_os_type": "Gentoo_64",
       "headless": false,
-      "iso_checksum": "1fe353fec7142a551348ba3aa1b42dcf73df8ad815340f7da30239357f8d6b2fa4a5e2db8075efde9b3c28fcf16b62d5f8045cfb9c57fa0bda55821fe5390d44",
+      "iso_checksum": "2365f4f93b3b294440aacc396403c98a443ffc5d0bb68992341d177f7f8adef13765e3ef951f9507f2522e9f386b1bed7c04b075a6500c94e55a491a1ac8903e",
       "iso_checksum_type": "sha512",
-      "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/{{user `stage3`}}/install-amd64-minimal-{{user `stage3`}}.iso",
+      "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-{{user `stage3`}}.iso",
       "shutdown_command": "shutdown -hP now",
       "ssh_password": "{{user `password`}}",
       "ssh_username": "{{user `username`}}",
@@ -73,7 +73,7 @@
   ],
   "variables": {
     "password": "packer",
-    "stage3": "20150702",
+    "stage3": "20190825T214502Z",
     "username": "root"
   }
 }
