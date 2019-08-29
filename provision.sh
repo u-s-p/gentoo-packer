@@ -28,6 +28,7 @@ for script in \
   vagrant     \
   cleanup
 do
+  echo "*** PROVISION: $script ***"
   "$SCRIPTS/scripts/$script.sh"
 done
 
