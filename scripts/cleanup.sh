@@ -12,14 +12,12 @@ rm -rf /mnt/gentoo/var/log/*
 rm -rf /mnt/gentoo/var/tmp/*
 
 chroot /mnt/gentoo /bin/bash <<'EOF'
-wget http://intgat.tigress.co.uk/rmy/uml/zerofree-1.0.3.tgz
-tar xvzf zerofree-*.tgz
-cd zerofree*/
-make
+emerge "sys-fs/zerofree" --autounmask-write
+etc-update --automode -5
+emerge "sys-fs/zerofree"
 EOF
 
-mv /mnt/gentoo/zerofree* ./
-cd zerofree*/
+mv /mnt/gentoo/sbin/zerofree ./
 
 mount -o remount,ro /mnt/gentoo
 ./zerofree /dev/sda4
